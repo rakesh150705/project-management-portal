@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <button onclick="resetApp()" class="reset-btn">🔄 Reset</button>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📝 Task Manager</h1>
+
+    <!-- AUTH SECTION -->
+    <div id="authSection">
+
+        <div class="card">
+            <h2>Register</h2>
+            <input id="regUsername" placeholder="Username">
+            <input id="regPassword" type="password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <button onclick="resetRegister()">Reset</button>
+        </div>
+
+        <div class="card">
+            <h2>Login</h2>
+            <input id="loginUsername" placeholder="Username">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="resetLogin()">Reset</button>
+        </div>
+
+    </div>
+
+    <!-- TASK SECTION -->
+    <div id="taskSection" style="display:none;">
+
+        <div class="card">
+            <h2>Add Task</h2>
+            <input id="title" placeholder="Task Title">
+            <input id="description" placeholder="Task Description">
+            <button onclick="addTask()">➕ Add Task</button>
+            <button onclick="resetTask()">Reset</button>
+        </div>
+
+        <div class="card">
+            <h2>Your Tasks</h2>
+            <button onclick="logout()">🚪 Logout</button>
+            <ul id="taskList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
